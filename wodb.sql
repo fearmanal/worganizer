@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2017 at 01:32 PM
+-- Generation Time: Jul 08, 2017 at 09:18 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -40,8 +40,8 @@ CREATE TABLE `cake` (
 --
 
 INSERT INTO `cake` (`id`, `name`, `price`, `image`, `description`, `create_date`) VALUES
-(1, 'Firman  Cake 2', 430000, 'media/gallery/plagiarism-check.png', 'Hello ini firman', '2017-07-08 05:34:37'),
-(2, 'Rudy Cake 2', 140000, 'image/hello2.png', 'desc rudi', '2017-07-08 05:35:35'),
+(1, 'Firman  Cake 2', 410000, 'media/gallery/plagiarism-check.png', 'Hello ini firman', '2017-07-08 17:13:00'),
+(2, 'Rudy Cake 3', 140000, 'image/hello2.png', 'desc rudi', '2017-07-08 19:05:58'),
 (4, 'Tantan Cake', 100000, 'image/hello.png', 'jksjladfhsafd', '2017-07-06 16:29:43'),
 (6, 'Sheptian Cake', 850000, 'media/gallery/strawberry.png', 'hello2', '2017-07-08 06:19:26'),
 (10, 'namex', 100, 'image', 'description', '2017-07-08 06:55:23'),
@@ -69,7 +69,7 @@ CREATE TABLE `catering` (
 --
 
 INSERT INTO `catering` (`id`, `name`, `price`, `image`, `description`, `create_date`) VALUES
-(1, 'Firman Catering', 11000000, 'media/gallery/jeruk.jpg', 'akjalkfjadjkhas;lkfjas;f', '2017-07-07 16:04:28');
+(1, 'Firman Catering', 12000000, 'media/gallery/jeruk.jpg', 'akjalkfjadjkhas;lkfjas;f', '2017-07-08 17:16:46');
 
 -- --------------------------------------------------------
 
@@ -323,7 +323,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `type`, `status`, `name`, `birthdate`, `address`, `zip`, `city`, `province`, `country`, `phone`, `gender`, `image`, `create_date`) VALUES
-(1, 'firman', 'firman', NULL, 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2017-07-08 11:04:42');
+(1, 'firman', '74bfebec67d1a87b161e5cbcf6f72a4a', 'fearman.al@gmail.com', 'Admin', 'Enable', 'Firman Alhadiansyah', '1994-08-05', 'Jl. KH. Usman Dhomiri No. 44 RT.03/03 Kel. Padasuka Kec. Cimahi Tengah', 40526, 'Cimahi', 'Jawa Barat', 'Indonesia', 838217164, 'Pria', 'media/gallery/corp.jpg', '2017-07-08 19:08:50'),
+(3, 'rudy', 'rudy', 'rudy@gmail.com', 'Admin', 'Enable', 'Rudy Gedung', '1995-05-05', 'Bandung', 40958, 'Bandung', 'Jawa Barat', 'Indonesia', 2147483647, 'Pria', '', '2017-07-08 16:40:52'),
+(5, 'tantan', 'tantan', '', 'User', 'Enable', '', '0000-00-00', '', 0, '', '', '', 0, 'Pria', 'media/gallery/capture.png', '2017-07-08 16:43:15'),
+(7, 'ujang', 'c959810f01adc10791f46e1b3ecab45a', '', 'User', 'Enable', '', '0000-00-00', '', 0, '', '', '', 0, 'Pria', '', '2017-07-08 17:22:24');
 
 --
 -- Indexes for dumped tables
@@ -440,7 +443,7 @@ ALTER TABLE `dokumentasi`
 -- AUTO_INCREMENT for table `gedung`
 --
 ALTER TABLE `gedung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `hiburan`
 --
@@ -475,7 +478,7 @@ ALTER TABLE `undangan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Constraints for dumped tables
 --
