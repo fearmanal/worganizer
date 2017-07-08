@@ -84,6 +84,26 @@ switch ($tbname) {
         mysqli_query($connection, "INSERT INTO $tbname (name, price, image, description, create_date) VALUES ('$name', '$price', '$image', '$description', NOW())");
         header($headername);
         break;       
+    case "user":
+        $username = mysqli_real_escape_string($connection, $_POST['username']);
+        $password = md5($_POST['password']);
+        $email = mysqli_real_escape_string($connection, $_POST['email']);
+        $type = $_POST['type'];
+        $status = $_POST['status'];
+        $name = mysqli_real_escape_string($connection, $_POST['name']);
+        $birthdate = mysqli_real_escape_string($connection, $_POST['birthdate']);
+        $address = mysqli_real_escape_string($connection, $_POST['address']);
+        $zip = $_POST['zip'];
+        $city = mysqli_real_escape_string($connection, $_POST['city']);
+        $province = mysqli_real_escape_string($connection, $_POST['province']);
+        $country = mysqli_real_escape_string($connection, $_POST['country']);
+        $phone = mysqli_real_escape_string($connection, $_POST['phone']);
+        $gender = $_POST['gender'];
+        $create_date = $_POST['create_date'];
+
+        mysqli_query($connection, "INSERT INTO $tbname (username, password, email, type, status, name, birthdate, address, zip, city, province, country, phone, gender, image, create_date) VALUES ('$username', '$password', '$email', '$type', '$status', '$name', '$birthdate', '$address', '$zip', '$city', '$province', '$country', '$phone', '$gender', '$image', NOW())");
+        header($headername);
+        break;
     default:
         echo "Error! Table Not Found";
 }

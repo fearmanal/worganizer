@@ -85,6 +85,26 @@
         case "undangan":
             $modal=mysqli_query($connection, "UPDATE $tbname SET name = '$name', price = '$price', image = '$image', description = '$description', create_date = NOW() WHERE id = '$id'");
             header($headername);
+            break;
+        case "user":
+            $username = mysqli_real_escape_string($connection, $_POST['username']);
+            $password = mysqli_real_escape_string($connection, $_POST['password']);
+            $email = mysqli_real_escape_string($connection, $_POST['email']);
+            $type = $_POST['type'];
+            $status = $_POST['status'];
+            $name = mysqli_real_escape_string($connection, $_POST['name']);
+            $birthdate = mysqli_real_escape_string($connection, $_POST['birthdate']);
+            $address = mysqli_real_escape_string($connection, $_POST['address']);
+            $zip = $_POST['zip'];
+            $city = mysqli_real_escape_string($connection, $_POST['city']);
+            $province = mysqli_real_escape_string($connection, $_POST['province']);
+            $country = mysqli_real_escape_string($connection, $_POST['country']);
+            $phone = mysqli_real_escape_string($connection, $_POST['phone']);
+            $gender = $_POST['gender'];
+            $create_date = $_POST['create_date'];
+
+            $modal=mysqli_query($connection, "UPDATE $tbname SET username = '$username', email = '$email', type = '$type', status = '$status', name = '$name', birthdate = '$birthdate', address = '$address', zip = '$zip', city = '$city', province = '$province', country = '$country', phone = '$phone', gender = '$gender', image = '$image', create_date = NOW() WHERE id = '$id'");
+            header($headername);
             break;      
         default:
             echo "Error! Table Not Found";

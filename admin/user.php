@@ -1,3 +1,8 @@
+<script>
+  $('#myDatepicker2').datetimepicker({
+      format: 'YYYY-MM-DD'
+  });
+</script>
 <div class="row">
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
@@ -16,11 +21,12 @@
             <thead>
               <tr class="headings">
                 <th class="column-title">ID</th>
+                <th class="column-title">Username</th>
+                <th class="column-title">Email</th>
                 <th class="column-title">Nama</th>
-                <th class="column-title">Harga</th>
-                <th class="column-title">Gambar</th>
-                <th class="column-title">Deskripsi</th>
-                <th class="column-title">Timestamp</th>
+                <th class="column-title">Type</th>
+                <th class="column-title">Status</th>
+                <th class="column-title">Detail</th>
                 <th class="column-title no-link last"><span class="nobr">Action</span></th>
               </tr>
             </thead>
@@ -37,11 +43,12 @@
               ?>
                 <tr class="even pointer">
                     <td><?php echo $r['id']; ?></td>
+                    <td><?php echo $r['username']; ?></td>
+                    <td><?php echo $r['email']; ?></td>
                     <td><?php echo $r['name']; ?></td>
-                    <td><?php echo $r['price']; ?></td>
-                    <td><?php echo $r['image']; ?></td>
-                    <td><a href="#" data-target="#ModalDesc<?php echo $r['id']; ?>" data-toggle="modal">Lihat Deskripsi</a></td>
-                    <td><?php echo $r['create_date']; ?></td>
+                    <td><?php echo $r['type']; ?></td>
+                    <td><?php echo $r['status']; ?></td>
+                    <td><a href="#">Change Password</a></td>
                     <td>
                        <a href="#" class='open_modal' id='<?php echo $r['id']; ?>' tbname="<?php echo $tbname; ?>"><i class="fa fa-pencil"></i></a>
                        <a href="#" onclick="confirm_modal('delete_data.php?id=<?php echo $r['id']; ?>&amp;tbname=<?php echo $tbname; ?>');"><i class="fa fa-trash"></i></a>
@@ -53,10 +60,10 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4>Deskripsi <?php echo $r['name']; ?></h4>
+                            <h4>Detail <?php echo $r['name']; ?></h4>
                         </div>
                         <div class="modal-body">           
-                          <?php echo $r['description']; ?>
+                          <?php echo $r['email']; ?>
                         </div>     
                       </div>
                   </div>
@@ -84,27 +91,102 @@
           <form action="add_data.php" name="modal_popup" enctype="multipart/form-data" method="POST">
                 
                 <input type="hidden" name="tbname"  class="form-control" value="<?php echo $tbname; ?>" />
-
-                <div class="form-group" style="padding-bottom: 20px;">
-                  <label for="name">Nama</label>
-                  <input type="text" name="name"  class="form-control" placeholder="Nama" required/>
+                <div class="row">
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                  <label for="username">Username</label>
+                  <input type="text" name="username"  class="form-control" placeholder="Username" required/>
                 </div>
 
-                <div class="form-group" style="padding-bottom: 20px;">
-                  <label for="price">Harga</label>
-                  <input type="text" name="price"  class="form-control" placeholder="Harga" required/>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                  <label for="email">Email</label>
+                  <input type="text" name="email"  class="form-control" placeholder="Email"/>
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                  <label for="password">Password</label>
+                  <input type="password" name="password"  class="form-control" placeholder="Password" required/>
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                  <label for="xpassword">Confirm Password</label>
+                  <input type="password" name="xpassword"  class="form-control" placeholder="Password" required/>
                 </div>                
 
-                <div class="form-group" style="padding-bottom: 20px;">
-                  <label for="description">Deskripsi</label>
-                   <textarea name="description"  class="form-control" placeholder="Deskripsi" required/></textarea>
-                </div>
-                
-                <div class="form-group" style="padding-bottom: 20px;">
-                  <label for="image">Gambar</label>
-                  <input type="file" name="image" class="form-control" required/>
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                  <label for="name">Nama</label>
+                  <input type="text" name="name"  class="form-control" placeholder="Nama"/>
                 </div>
 
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                  <label for="phone">Phone</label>
+                  <input type="text" name="phone"  class="form-control" placeholder="Phone"/>
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                  <label for="gender">Jenis Kelamin</label>
+                  <select name="gender" class="form-control">
+                      <option value="Pria">Pria</option>
+                      <option value="Wanita">Wanita</option>
+                  </select>
+                </div>                
+
+                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                    <label for="birthdate">Tanggal Lahir</label>
+                    <div class='input-group date' id='myDatepicker2'>
+                        <input type='text' name="birthdate" class="form-control" placeholder="YYYY-MM-DD"/>
+                        <span class="input-group-addon">
+                           <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                  <label for="address">Alamat</label>
+                  <input type="text" name="address"  class="form-control" placeholder="Alamat"/>
+                </div>                
+
+                <div class="form-group col-md-2 col-sm-2 col-xs-12">
+                  <label for="zip">Kode Pos</label>
+                  <input type="text" name="zip"  class="form-control" placeholder="Pos"/>
+                </div>
+
+                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                  <label for="city">Kota</label>
+                  <input type="text" name="city"  class="form-control" placeholder="Kota"/>
+                </div>
+
+                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                  <label for="province">Provinsi</label>
+                  <input type="text" name="province"  class="form-control" placeholder="Provinsi"/>
+                </div>
+
+                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                  <label for="country">Negara</label>
+                  <input type="text" name="country"  class="form-control" placeholder="Negara"/>
+                </div>
+                
+                <div class="form-group col-md-5 col-sm-5 col-xs-12">
+                  <label for="image">Gambar</label>
+                  <input type="file" name="image" class="form-control"/>
+                </div>
+
+                <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                  <label for="type">Type</label>
+                  <select name="type" class="form-control">
+                      <option value="User">User</option>
+                      <option value="Admin">Admin</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                  <label for="status">Status</label>
+                  <select name="status" class="form-control">
+                      <option value="Enable">Enable</option>
+                      <option value="Disable">Disable</option>
+                  </select>
+                </div>
+
+              </div>
               <div class="modal-footer">
                   <button class="btn btn-success" type="submit">
                       Confirm
@@ -116,10 +198,7 @@
               </div>
 
               </form>
-
-           
-
-            </div>
+        </div>
 
            
         </div>

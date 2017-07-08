@@ -1,3 +1,13 @@
+<?php   
+
+      session_start(); 
+
+      if(!isset($_SESSION['ulogin'])) {
+           header("location:login.php");  
+      }
+      else {
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,12 +31,31 @@
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="../vendors/build/css/custom.min.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- bootstrap-datetimepicker -->
+    <link href="../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
     
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap-datetimepicker -->    
+    <script src="../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    
   </head>
 
   <body class="nav-md">
@@ -76,7 +105,7 @@
                       <li><a href="index.php?menu=undangan">Undangan</a></li>
                     </ul>
                   </li>
-                  <li><a href="index.php?menu=users"><i class="fa fa-users"></i> Manage User </a></li>
+                  <li><a href="index.php?menu=user"><i class="fa fa-users"></i> Manage User </a></li>
                 </ul>
               </div>
             </div>
@@ -93,7 +122,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="logout.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -244,9 +273,13 @@
                         break;
                     case "undangan":
                         include "$menu.php";
+                        break;
+                    case "user":
+                        include "$menu.php";
                         break;        
                     default:
                         echo "Error! Page Not Found";
+                        echo "<br>".$_SESSION['ulogin'];
                 }
               }
               else {
@@ -290,14 +323,12 @@
     <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
     <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
     <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="../vendors/DateJS/build/date.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    
     <!-- iCheck -->
     <script src="../vendors/iCheck/icheck.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../vendors/build/js/custom.min.js"></script>
   </body>
 </html>
+
+<?php } ?>

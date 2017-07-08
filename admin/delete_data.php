@@ -48,6 +48,10 @@
         case "undangan":
             $modal=mysqli_query($connection, "Delete FROM $tbname WHERE id='$id'");
             header($headername);
+            break;
+        case "user":
+            $modal=mysqli_query($connection, "Delete FROM $tbname WHERE id='$id'");
+            header($headername);
             break;     
         default:
             echo "Error! Table Not Found";
