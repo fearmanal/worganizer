@@ -16,7 +16,7 @@
     if (isset($_POST['username']) || isset($_POST['password'])) {   
       include "koneksi.php";
       $susername = stripslashes($_POST['username']);
-      $spassword = stripslashes($_POST['password']);
+      $spassword = md5($_POST['password']);
       $username = mysqli_real_escape_string($connection, $susername);
       $password = mysqli_real_escape_string($connection, $spassword);
 
