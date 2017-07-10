@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>W Organizer</title>
+    <title>GGWP - Gal Gadot Wedding Planner</title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,6 @@
   <body>
     <div class="container">
       <center><h1>Create Order</h1></center>
-      <br>
 
         <div class="row">
           <section>
@@ -148,8 +147,11 @@
                   <form role="form" action="order_review.php" enctype="multipart/form-data" method="POST">
                       <input type="hidden" name="id_user" value="<?php echo $_SESSION['ulogin']; ?>">
                       <div class="tab-content">
+                          
                           <div class="tab-pane active" role="tabpanel" id="step1">
-                              <h4>Service</h4>
+                              <center>
+                                <h2>SERVICE</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -161,7 +163,7 @@
                                   while($r=mysqli_fetch_array($modal)){
                                   $no++;       
                                 ?>
-                                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                  <div class="col-md-4">
                                   <input type="radio" class="radio_item" value="<?php echo $r['id']; ?>" name="<?php echo $tbname ?>" id="<?php echo $tbname.$r['id']; ?>">
                                   <label class="label_item" for="<?php echo $tbname.$r['id']; ?>">
                                       <div class="hovereffect">
@@ -176,11 +178,13 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
+
                           <div class="tab-pane" role="tabpanel" id="step2">
                               <h4>Catering</h4>
                               <br/>

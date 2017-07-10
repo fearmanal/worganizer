@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2017 at 06:58 AM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Jul 10, 2017 at 10:27 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -139,7 +139,6 @@ CREATE TABLE `gedung` (
 
 INSERT INTO `gedung` (`id`, `name`, `price`, `image`, `address`, `description`, `create_date`) VALUES
 (1, 'Gedung Balai Sartika', 14950000, 'media/gallery/balai-sartika.jpeg', 'Jl. Suryalaya Indah No. 1-3, Buahbatu, Cijagra, Lengkong, Kota Bandung, Jawa Barat 40265', '-', '2017-07-09 03:30:36'),
-(2, 'Graha Bhayangkara', 8500000, 'media/gallery/graha-bhayangkara.jpeg', 'Jl. Cicendo No.29, Pasir Kaliki, Cicendo, Kota Bandung, Jawa Barat 40171', '-', '2017-07-09 03:31:57'),
 (3, 'Gedung STT Tekstil', 6000000, 'media/gallery/stt-tekstil.jpeg', 'Jl. Jakarta No.34, Kebonwaru, Batununggal, Kota Bandung, Jawa Barat 40272', '-', '2017-07-09 03:32:54'),
 (4, 'Bale Asri Pusdai', 18500000, 'media/gallery/bale-asri-pusdai.jpeg', 'Jl. Diponegoro No.63, Cihaur Geulis, Cibeunying Kaler, Kota Bandung, Jawa Barat 40122', '-', '2017-07-09 03:34:07'),
 (5, 'Gedung Kologdam', 8500000, 'media/gallery/kologdam.jpeg', 'Jl. Aceh, Merdeka, Sumur Bandung, Kota Bandung, Jawa Barat 40113', '-', '2017-07-09 03:35:29');
@@ -211,7 +210,7 @@ CREATE TABLE `order` (
 --
 
 INSERT INTO `order` (`id`, `create_date`, `wedding_date`, `id_user`, `id_cake`, `id_catering`, `id_dekorasi`, `id_dokumentasi`, `id_gedung`, `id_hiburan`, `id_riasnbaju`, `id_service`, `id_souvenir`, `id_undangan`, `harga_cake`, `harga_catering`, `harga_dekorasi`, `harga_dokumentasi`, `harga_gedung`, `harga_hiburan`, `harga_riasnbaju`, `harga_service`, `harga_souvenir`, `harga_undangan`, `jumlah_catering`, `jumlah_souvenir`, `jumlah_undangan`, `total`) VALUES
-(1, '2017-07-08 11:06:22', '2017-07-28', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 500, 500, 500, 100000);
+(2, '2017-07-10 04:00:56', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -236,8 +235,7 @@ INSERT INTO `riasnbaju` (`id`, `name`, `price`, `image`, `description`, `create_
 (1, 'Javanese Black', 7500000, 'media/gallery/javanese-black.jpg', '- 2 Set Baju Pengantin\r\n- Rias Pengantin ', '2017-07-09 02:31:40'),
 (2, 'Javanese Maroon', 7000000, 'media/gallery/javanese.jpg', '- 2 Set Baju Pengantin\r\n- Rias Pengantin', '2017-07-09 02:33:13'),
 (3, 'Songket Dress', 6500000, 'media/gallery/songkat-dress.jpg', '- 2 Set Baju Pengantin\r\n- Rias Pengantin', '2017-07-09 02:34:00'),
-(4, 'Skyblue Muslim', 7000000, 'media/gallery/kebaya-muslim.png', '- 2 Set Baju Pengantin\r\n- Rias Pengantin', '2017-07-09 02:35:55'),
-(5, 'Tosca Muslim', 7000000, 'media/gallery/green-muslim.jpg', '- 2 Set Baju Pengantin\r\n- Riasa Pengantin', '2017-07-09 02:39:22');
+(4, 'Skyblue Muslim', 7000000, 'media/gallery/kebaya-muslim.png', '- 2 Set Baju Pengantin\r\n- Rias Pengantin', '2017-07-09 02:35:55');
 
 -- --------------------------------------------------------
 
@@ -283,11 +281,9 @@ CREATE TABLE `souvenir` (
 --
 
 INSERT INTO `souvenir` (`id`, `name`, `price`, `image`, `description`, `create_date`) VALUES
-(1, 'Kipas Biru', 3500, 'media/gallery/kipas.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:55:56'),
 (2, 'Gelas Mini', 4000, 'media/gallery/gelas.jpg', 'termasuk box dan kartu ucapan terima kasih', '2017-07-09 02:57:11'),
 (3, 'Kalender Kayu', 5000, 'media/gallery/log-calendar.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:55:45'),
 (4, 'Gantungan Kunci', 2500, 'media/gallery/gantungan-kunci.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:58:07'),
-(5, 'Note Buku', 3000, 'media/gallery/note-book.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:58:38'),
 (6, 'Frame Photo', 4500, 'media/gallery/frame-photo.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:59:36');
 
 -- --------------------------------------------------------
@@ -310,7 +306,6 @@ CREATE TABLE `undangan` (
 --
 
 INSERT INTO `undangan` (`id`, `name`, `price`, `image`, `description`, `create_date`) VALUES
-(1, 'Square Inv', 3000, 'media/gallery/standar-inv.jpg', '-', '2017-07-09 03:15:42'),
 (2, 'Onepage Inv', 850, 'media/gallery/onepage.png', '-', '2017-07-09 03:16:50'),
 (3, 'Mail Inv', 1500, 'media/gallery/mail-invitation.jpg', '-', '2017-07-09 03:17:28'),
 (4, 'Opensquare Inv', 5500, 'media/gallery/opening-inv.jpg', '-', '2017-07-09 03:18:01'),
@@ -477,12 +472,12 @@ ALTER TABLE `hiburan`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `riasnbaju`
 --
 ALTER TABLE `riasnbaju`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `service`
 --
