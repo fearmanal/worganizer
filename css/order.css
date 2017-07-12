@@ -258,3 +258,35 @@ span.round-tab:hover {
         left: 35%;
     }
 }
+
+
+/*
+=========================================
+=========================================
+              INVOICE
+=========================================
+=========================================
+*/
+
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
+
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
+
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
+
+.order-invoice {
+    padding: 20px;
+    border: 2px solid #575757;
+    width: 80%;
+    margin: 0 auto;
+}

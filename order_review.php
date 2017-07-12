@@ -11,7 +11,10 @@
 		    $modal=mysqli_query($connection, "SELECT * FROM $tbname WHERE id = '$id_user'");
 		    while($r=mysqli_fetch_array($modal)){
 		    $no++;
-		    
+		    $user_name = $r['name'];
+		    $user_address = $r['address'];
+		    $user_city = $r['city'];
+		    $user_zip = $r['zip'];
 	?>
 	<h3>Nama : <?php echo $r['name'];	?></h3>
 	<?php } } ?>
@@ -53,6 +56,7 @@
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
 					<input type="hidden" name="id_service" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_service" value="<?php echo $r['price']; ?>">
+					<input type="hidden" name="nama_service" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -78,6 +82,7 @@
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
 					<input type="hidden" name="id_cake" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_cake" value="<?php echo $r['price']; ?>">
+					<input type="hidden" name="nama_cake" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -108,6 +113,8 @@
 					<input type="hidden" name="id_catering" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_catering" value="<?php echo $r['price']; ?>">
 					<input type="hidden" name="jumlah_catering" value="<?php echo $jumlah; ?>">
+					<input type="hidden" name="subtotal_catering" value="<?php echo $subtotal; ?>">
+					<input type="hidden" name="nama_catering" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -133,6 +140,7 @@
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
 					<input type="hidden" name="id_dekorasi" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_dekorasi" value="<?php echo $r['price']; ?>">
+					<input type="hidden" name="nama_dekorasi" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -158,6 +166,7 @@
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
 					<input type="hidden" name="id_dokumentasi" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_dokumentasi" value="<?php echo $r['price']; ?>">
+					<input type="hidden" name="nama_dokumentasi" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -183,6 +192,7 @@
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
 					<input type="hidden" name="id_gedung" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_gedung" value="<?php echo $r['price']; ?>">
+					<input type="hidden" name="nama_gedung" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -208,6 +218,7 @@
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
 					<input type="hidden" name="id_hiburan" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_hiburan" value="<?php echo $r['price']; ?>">
+					<input type="hidden" name="nama_hiburan" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -233,6 +244,7 @@
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
 					<input type="hidden" name="id_riasnbaju" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_riasnbaju" value="<?php echo $r['price']; ?>">
+					<input type="hidden" name="nama_riasnbaju" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -263,6 +275,8 @@
 					<input type="hidden" name="id_souvenir" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_souvenir" value="<?php echo $r['price']; ?>">
 					<input type="hidden" name="jumlah_souvenir" value="<?php echo $jumlah; ?>">
+					<input type="hidden" name="subtotal_souvenir" value="<?php echo $subtotal; ?>">
+					<input type="hidden" name="nama_souvenir" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -293,6 +307,8 @@
 					<input type="hidden" name="id_undangan" value="<?php echo $r['id']; ?>">
 					<input type="hidden" name="harga_undangan" value="<?php echo $r['price']; ?>">
 					<input type="hidden" name="jumlah_undangan" value="<?php echo $jumlah; ?>">
+					<input type="hidden" name="subtotal_undangan" value="<?php echo $subtotal; ?>">
+					<input type="hidden" name="nama_undangan" value="<?php echo $r['name']; ?>">
 				</td>
 			</tr>
 		<?php } } ?>
@@ -305,6 +321,10 @@
 				<td colspan="7">
 					<center>
 					<input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
+					<input type="hidden" name="user_name" value="<?php echo $user_name; ?>">
+					<input type="hidden" name="user_address" value="<?php echo $user_address; ?>">
+					<input type="hidden" name="user_city" value="<?php echo $user_city; ?>">
+					<input type="hidden" name="user_zip" value="<?php echo $user_zip; ?>">
 					<input type="hidden" name="wedding_date" value="<?php echo $wedding_date; ?>">
 					<input type="hidden" name="total" value="<?php echo $total; ?>">
 					<a href="index.php" class="btn btn-default"></a>
