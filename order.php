@@ -186,7 +186,9 @@
                           </div>
 
                           <div class="tab-pane" role="tabpanel" id="step2">
-                              <h4>Catering</h4>
+                              <center>
+                                <h2>CATERING</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -213,14 +215,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step3">
-                              <h4>Dekorasi</h4>
+                              <center>
+                                <h2>DEKORASI</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -247,14 +252,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step4">
-                              <h4>Dokumentasi</h4>
+                              <center>
+                                <h2>DOKUMENTASI</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -281,14 +289,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step5">
-                              <h4>Gedung</h4>
+                              <center>
+                                <h2>GEDUNG</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -315,14 +326,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step6">
-                              <h4>Hiburan</h4>
+                              <center>
+                                <h2>HIBURAN</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -349,14 +363,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step7">
-                              <h4>Baju Pengantin &amp; Rias</h4>
+                              <center>
+                                <h2>BAJU PENGANTIN &amp; RIAS</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -383,14 +400,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step8">
-                              <h4>Cake</h4>
+                              <center>
+                                <h2>CAKE</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -417,14 +437,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step9">
-                              <h4>Souvenir</h4>
+                              <center>
+                                <h2>SOUVENIR</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -451,14 +474,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step10">
-                              <h4>Undangan</h4>
+                              <center>
+                                <h2>UNDANGAN</h2>
+                              </center>
                               <br/>
                               <div class="row">                                
                                 <?php 
@@ -485,14 +511,17 @@
                                 <?php } ?>
                                 <br>
                               </div>
-                              <ul class="list-inline pull-right">
-                                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                  <li><button type="button" class="btn btn-default reset-<?php echo $tbname; ?>">Reset</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">Next</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="button" class="btn btn-danger reset-<?php echo $tbname; ?>">Reset</button>
+                                    <button type="button" class="btn btn-success next-step ">Next</button>
+                              </center>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="complete">
-                              <h4>Informasi Tambahan </h4>
+                              <center>
+                                <h2>INFORMASI TAMBAHAN</h2>
+                              </center>
                               <br/>
                               <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                   <label for="wedding_date">Tanggal Pernikahan</label>
@@ -518,10 +547,11 @@
                                 <label for="jumlah_souvenir">Jumlah Souvenir</label>
                                 <input type="text" name="jumlah_souvenir" class="form-control" value="0"/>
                               </div>
-                              <ul class="list-inline pull-right">
-                                <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                <li><button type="submit" class="btn btn-primary">Finish</button></li>
-                              </ul>
+                              <br>
+                              <center>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    <button type="submit" class="btn btn-primary">Finish</button>
+                              </center>
                           </div>
                           <div class="clearfix"></div>
                       </div>

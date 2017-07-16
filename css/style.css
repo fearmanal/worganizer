@@ -1,4 +1,17 @@
+nav.navbar.navbar-fixed-top ul.navbar-nav {
+	float: right;
+}
+
 .img-sli {
 	width: auto;
 	height: 500px;
+}
+
+.login_content form div.form-group {
+	margin-bottom: 20px;
+}
+
+.login_content form div input.login-admin {
+    float: none !important;
+    margin-left: 0px !important;
 }

@@ -70,6 +70,9 @@
 
     <!-- Custom Theme Style -->
     <link href="vendors/build/css/custom.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="login">
@@ -82,10 +85,10 @@
           <section class="login_content">
             <form action="" enctype="multipart/form-data" method="POST">
               <h1>Login Form</h1>
-              <div>
+              <div class="form-group col-md-12 col-sm-12 col-xs-12">
                 <input type="text" name="username" class="form-control" placeholder="Username" required="" />
               </div>
-              <div>
+              <div class="form-group col-md-12 col-sm-12 col-xs-12">
                 <input type="password" name="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
@@ -102,11 +105,6 @@
 
                 <div class="clearfix"></div>
                 <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>
               </div>
             </form>
           </section>
@@ -114,19 +112,19 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form action="add_data.php" name="modal_popup" enctype="multipart/form-data" method="POST">               
+            <form action="add_user.php" name="modal_popup" enctype="multipart/form-data" method="POST">               
                 <h1>Create Account</h1>
                 <div class="row">
                   <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                    <input type="text" name="username"  class="form-control" placeholder="Username" required/>
+                    <input type="text" name="username" class="form-control" placeholder="Username" required/>
                   </div>
 
                   <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                    <input type="password" name="password"  class="form-control" placeholder="Password" required/>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required/>
                   </div>
 
                   <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                    <input type="password" name="xpassword"  class="form-control" placeholder="Confirm Password" required/>
+                    <input type="password" name="xpassword" class="form-control" placeholder="Confirm Password" required/>
                   </div>                
 
                   <div class="form-group col-md-12 col-sm-12 col-xs-12">
@@ -134,11 +132,11 @@
                   </div>
 
                   <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" name="email"  class="form-control" placeholder="Email"/>
+                    <input type="text" name="email" class="form-control" placeholder="Email"/>
                   </div>
 
                   <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" name="phone"  class="form-control" placeholder="Phone"/>
+                    <input type="text" name="phone" class="form-control" placeholder="Phone"/>
                   </div>
 
                   <div class="form-group col-md-6 col-sm-6 col-xs-12">
@@ -155,7 +153,7 @@
                              <span class="glyphicon glyphicon-calendar"></span>
                           </span>
                       </div>
-                  </div>   
+                  </div> 
 
                   <div class="form-group col-md-12 col-sm-12 col-xs-12">
                     <input type="text" name="address"  class="form-control" placeholder="Alamat"/>
@@ -176,19 +174,16 @@
                   <div class="form-group col-md-6 col-sm-6 col-xs-12">
                     <input type="text" name="country"  class="form-control" placeholder="Negara"/>
                   </div>
-                  
-                  <div class="form-group col-md-5 col-sm-5 col-xs-12">
-                    <input type="hidden" name="image" class="form-control" value="images/no-image.jpg" />
-                  </div>
 
-                    <input type="hidden" name="tbname"  class="form-control" value="user" />
-                    <input type="hidden" name="type" class="form-control" value="User" /> 
-                    <input type="hidden" name="status" class="form-control" value="Enable" />
+                  <input type="hidden" name="image" class="form-control" value="images/no-image.jpg" />
+                  <input type="hidden" name="tbname"  class="form-control" value="user" />
+                  <input type="hidden" name="type" class="form-control" value="User" /> 
+                  <input type="hidden" name="status" class="form-control" value="Enable" />
                  
 
                 </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
+                <button class="btn btn-success" type="submit">Confirm </button>
               </div>
 
               <div class="separator">
@@ -198,11 +193,6 @@
 
                 <div class="clearfix"></div>
                 <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>
               </div>
               </form>
           </section>
