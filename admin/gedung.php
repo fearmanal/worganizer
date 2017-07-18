@@ -9,7 +9,39 @@
         <div class="clearfix"></div>
       </div>
       <div class="x_content">
-        <p><a href="#" class="btn btn-success" data-target="#ModalAdd" data-toggle="modal">Add Data</a></p>
+        
+        <div class="row">
+          <div class="col-md-3 col-xs-12">
+            <p><a href="#" class="btn btn-success" data-target="#ModalAdd" data-toggle="modal">Add Data</a></p>
+          </div>
+          <div class="col-md-9 col-xs-12">
+            <?php 
+                include "koneksi.php";
+                $tbname="gedung";
+            ?>
+            <form action="pencarian.php" name="modal_popup" enctype="multipart/form-data" method="POST">               
+              <input type="hidden" name="tbname"  class="form-control" value="<?php echo $tbname; ?>" />
+              <ul class="searchtool">
+              <li>
+                <select name="searchby" class="form-control">
+                  <option value="-">Cari Berdasarkan</option>
+                  <option value="name">Nama</option>
+                  <option value="price">Harga</option>
+                  <option value="description">Description</option>
+                </select>
+              </li>
+              <li>
+                <input type="text" name="search"  class="form-control" placeholder="Cari Data" required/>
+              </li>
+              <li>
+                <button class="btn btn-success" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </li>
+              </ul>
+            </form>
+          </div>
+        </div>
 
         <div class="table-responsive">
           <table class="table table-striped jambo_table bulk_action">

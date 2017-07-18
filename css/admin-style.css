@@ -1,0 +1,8 @@
+ul.searchtool {
+    list-style: none;
+    float: right;
+}
+
+ul.searchtool li {
+    display: inline-block;
+}

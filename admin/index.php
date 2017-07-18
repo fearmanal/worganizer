@@ -43,6 +43,8 @@
     <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- bootstrap-datetimepicker -->
     <link href="../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <!-- Custom Style -->
+    <link href="../css/admin-style.css" rel="stylesheet">
     
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
@@ -77,7 +79,6 @@
                 <ul class="nav side-menu">
                   <li class="active"><a href="index.php?menu=dashboard"><i class="fa fa-home"></i> Home </a></li>
                   <li><a href="index.php?menu=order"><i class="fa fa-shopping-cart"></i> Order </a></li>
-                  <li><a href="index.php?menu=report"><i class="fa fa-bar-chart-o"></i> Reporting </a></li>
                   <li><a><i class="fa fa-edit"></i> Manage Data <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.php?menu=cake">Cake</a></li>
@@ -133,9 +134,6 @@
                         break;
                     case "order":
                         include "$menu.php";
-                        break;
-                    case "report":
-                        include "dashboard.php";
                         break;
                     case "cake":
                         include "$menu.php";
