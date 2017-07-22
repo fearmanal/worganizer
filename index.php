@@ -1,3 +1,6 @@
+<?php   
+   session_start(); 
+?>
 <!doctype html>
 <html lang="en">
    <head>
@@ -37,23 +40,21 @@
                <div class="navbar-collapse collapse  mnav" id="navbar-menu  mnav">
                   <!-- Navbar left -->
                   <ul class="nav navbar-nav nav-custom-left  mnav">
-                     <li class="active  mnav"> <a href="#home">Home</a> </li>
-                     <li> <a href="#service">Service</a> </li>
-                     <li> <a href="#product">Catalog</a> </li>
-                     <li class="dropdown  mnav">
-                        <a href="#" data-toggle="dropdown"> Contact <span class="caret"></span> </a>
-                        <ul class="dropdown-menu arrow mnav">
-                           <li><a href="#">Overview</a></li>
-                           <li><a href="#">Contact</a></li>
-                           <li><a href="#">Blog</a></li>
-                           <li><a href="#">Blog Post</a></li>
-                        </ul>
-                     </li>
+                     <li class="active  mnav"> <a href="index.php">Home</a> </li>
+                     <li> <a href="#catalog">Catalog</a> </li>
+                     <li> <a href="order.php">Order</a> </li>
                   </ul>
                   <!-- Navbar right -->
                   <ul class="nav navbar-nav navbar-right  mnav">
-                     <li> <a href="#">Login</a> </li>
-                     <li> <a href="#" class="btn btn-bordered navbar-btn  mnav">Register</a> </li>
+                  <?php
+                        if(!isset($_SESSION['ulogin'])) {
+                           echo "<li> <a href='login.php'>Login</a> </li>"; 
+                        }
+                        else {
+                           echo "<li> <a href='logout.php'>Logout</a> </li>"; 
+                        }
+                  ?>
+                     
                   </ul>
                </div>
                <!--/Menu --> 

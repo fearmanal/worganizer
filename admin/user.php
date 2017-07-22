@@ -99,7 +99,7 @@
 
                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                   <label for="email">Email</label>
-                  <input type="text" name="email"  class="form-control" placeholder="Email"/>
+                  <input type="text" name="email"  class="form-control" placeholder="Email" required/>
                 </div>
 
                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
@@ -114,12 +114,12 @@
 
                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                   <label for="name">Nama</label>
-                  <input type="text" name="name"  class="form-control" placeholder="Nama"/>
+                  <input type="text" name="name"  class="form-control" placeholder="Nama" required/>
                 </div>
 
                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                   <label for="phone">Phone</label>
-                  <input type="text" name="phone"  class="form-control" placeholder="Phone"/>
+                  <input type="text" name="phone"  class="form-control" placeholder="Phone" required/>
                 </div>
 
                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
@@ -133,7 +133,7 @@
                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                     <label for="birthdate">Tanggal Lahir</label>
                     <div class='input-group date' id='myDatepicker2'>
-                        <input type='text' name="birthdate" class="form-control" placeholder="YYYY-MM-DD"/>
+                        <input type='text' name="birthdate" class="form-control" placeholder="YYYY-MM-DD" required/>
                         <span class="input-group-addon">
                            <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -142,27 +142,27 @@
 
                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                   <label for="address">Alamat</label>
-                  <input type="text" name="address"  class="form-control" placeholder="Alamat"/>
+                  <input type="text" name="address"  class="form-control" placeholder="Alamat" required/>
                 </div>                
 
                 <div class="form-group col-md-2 col-sm-2 col-xs-12">
                   <label for="zip">Kode Pos</label>
-                  <input type="text" name="zip"  class="form-control" placeholder="Pos"/>
+                  <input type="text" name="zip"  class="form-control" placeholder="Pos" required/>
                 </div>
 
                 <div class="form-group col-md-3 col-sm-3 col-xs-12">
                   <label for="city">Kota</label>
-                  <input type="text" name="city"  class="form-control" placeholder="Kota"/>
+                  <input type="text" name="city"  class="form-control" placeholder="Kota" required/>
                 </div>
 
                 <div class="form-group col-md-3 col-sm-3 col-xs-12">
                   <label for="province">Provinsi</label>
-                  <input type="text" name="province"  class="form-control" placeholder="Provinsi"/>
+                  <input type="text" name="province"  class="form-control" placeholder="Provinsi" required/>
                 </div>
 
                 <div class="form-group col-md-4 col-sm-4 col-xs-12">
                   <label for="country">Negara</label>
-                  <input type="text" name="country"  class="form-control" placeholder="Negara"/>
+                  <input type="text" name="country"  class="form-control" placeholder="Negara" required/>
                 </div>
                 
                 <div class="form-group col-md-5 col-sm-5 col-xs-12">

@@ -292,6 +292,16 @@
 	    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	    <!-- Custom -->
 	    <link href="css/order.css" rel="stylesheet">
+	    <!-- CSS Stylesheet -->
+	    <link href="css/demo-2/top-navbar-2.css" rel="stylesheet">
+	    <!-- Google web font  -->
+	    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,greek' rel='stylesheet' type='text/css'>
+	    <!-- Font Awesome icon -->
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
 	    
 	    <!-- jQuery -->
 	    <script src="vendors/jquery/dist/jquery.min.js"></script>
@@ -302,6 +312,35 @@
 
 	  </head>
 	  <body>
+      <div class="my-nav">
+         <div class="navbar navbar-custom sticky mnav" role="navigation">
+            <div class="container">
+               <!-- Navbar-header -->
+               <div class="navbar-header mnav">
+                  <!-- Responsive menu button -->
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fa fa-bars"></i></button>
+                  <!-- LOGO --> 
+                  <a class="navbar-brand logo mnav" href="#">GGWP</a> 
+               </div>
+               <!-- end navbar-header --> 
+               <!-- menu -->
+               <div class="navbar-collapse collapse  mnav" id="navbar-menu  mnav">
+                  <!-- Navbar left -->
+                  <ul class="nav navbar-nav nav-custom-left  mnav">
+                     <li class="active  mnav"> <a href="index.php">Home</a> </li>
+                     <li> <a href="#catalog">Catalog</a> </li>
+                     <li> <a href="order.php">Order</a> </li>
+                  </ul>
+                  <!-- Navbar right -->
+                  <ul class="nav navbar-nav navbar-right  mnav">
+                     <li> <a href="logout.php">Logout</a> </li>
+                  </ul>
+               </div>
+               <!--/Menu --> 
+            </div>
+            <!-- end container --> 
+         </div>
+      </div>
 
 	<div class="container">
 	    <div class="order-success">

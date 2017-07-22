@@ -1,4 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GGWP - Gal Gadot Wedding Planner</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link href="css/demo-2/top-navbar-2.css" rel="stylesheet">
+    <!-- Google web font  -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,greek' rel='stylesheet' type='text/css'>
+    <!-- Font Awesome icon -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+      <div class="my-nav">
+         <div class="navbar navbar-custom sticky mnav" role="navigation">
+            <div class="container">
+               <!-- Navbar-header -->
+               <div class="navbar-header mnav">
+                  <!-- Responsive menu button -->
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fa fa-bars"></i></button>
+                  <!-- LOGO --> 
+                  <a class="navbar-brand logo mnav" href="#">GGWP</a> 
+               </div>
+               <!-- end navbar-header --> 
+               <!-- menu -->
+               <div class="navbar-collapse collapse  mnav" id="navbar-menu  mnav">
+                  <!-- Navbar left -->
+                  <ul class="nav navbar-nav nav-custom-left  mnav">
+                     <li class="active  mnav"> <a href="index.php">Home</a> </li>
+                     <li> <a href="#catalog">Catalog</a> </li>
+                     <li> <a href="order.php">Order</a> </li>
+                  </ul>
+                  <!-- Navbar right -->
+                  <ul class="nav navbar-nav navbar-right  mnav">
+                     <li> <a href="logout.php">Logout</a> </li>
+                  </ul>
+               </div>
+               <!--/Menu --> 
+            </div>
+            <!-- end container --> 
+         </div>
+      </div>
+
+<div class="container">
+<div class="col-xs-12 col-md-8 col-md-offset-2">
 <center><h1>Order Review</h1></center>
+<br><br>
 <form action="order_add.php" name="modal_popup" enctype="multipart/form-data" method="POST">
 	<?php
 		include "koneksi.php";
@@ -16,21 +80,26 @@
 		    $user_city = $r['city'];
 		    $user_zip = $r['zip'];
 	?>
-	<h3>Nama : <?php echo $r['name'];	?></h3>
+	<table>
+	<tr>
+		<td>Nama &nbsp;</td>
+		<td> &nbsp;: &nbsp;<b><?php echo $r['name']; ?></b></td>
+	</tr>
 	<?php } } ?>
-
-	<h3>Tanggal Pernikahan : <?php echo $wedding_date; ?></h3>
-
-	<table border="1">
-		<tr>
-			<td></td>
-			<td>Nama Produk</td>
-			<td></td>
-			<td>Jumlah</td>
-			<td></td>
-			<td>Harga</td>
-			<td>Subtotal</td>
-		</tr>
+	<tr>
+		<td>Tanggal Pernikahan &nbsp;</td>
+		<td> &nbsp;: &nbsp;<b><?php echo $wedding_date; ?></b></td>
+	</tr>
+	</table>
+	<br><br>
+	<table class="table table-striped">
+		<thead>
+			<th></th>
+			<th>Nama Produk</th>
+			<th style="text-align: center;">Jumlah</th>
+			<th style="text-align: center;">Harga</th>
+			<th style="text-align: center;">Subtotal</th>
+		</thead>
 		<?php
 			include "koneksi.php";
 			$total = 0;
@@ -48,9 +117,7 @@
 			<tr>
 				<td>Service</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td>1</td>
-				<td>X</td>
+				<td style="text-align: center;">1</td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
@@ -74,9 +141,7 @@
 			<tr>
 				<td>Cake</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td>1</td>
-				<td>X</td>
+				<td style="text-align: center;">1</td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
@@ -100,9 +165,7 @@
 			<tr>
 				<td>Catering</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td><?php echo $jumlah; ?></td>
-				<td>X</td>
+				<td style="text-align: center;"><?php echo $jumlah; ?></td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">
 					<?php 
@@ -132,9 +195,7 @@
 			<tr>
 				<td>Dekorasi</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td>1</td>
-				<td>X</td>
+				<td style="text-align: center;">1</td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
@@ -158,9 +219,7 @@
 			<tr>
 				<td>Dokumentasi</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td>1</td>
-				<td>X</td>
+				<td style="text-align: center;">1</td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
@@ -184,9 +243,7 @@
 			<tr>
 				<td>Gedung</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td>1</td>
-				<td>X</td>
+				<td style="text-align: center;">1</td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
@@ -210,9 +267,7 @@
 			<tr>
 				<td>Hiburan</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td>1</td>
-				<td>X</td>
+				<td style="text-align: center;">1</td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
@@ -236,9 +291,7 @@
 			<tr>
 				<td>Baju Pengantin &amp; Rias</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td>1</td>
-				<td>X</td>
+				<td style="text-align: center;">1</td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">
 					<?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?>
@@ -262,9 +315,7 @@
 			<tr>
 				<td>Souvenir</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td><?php echo $jumlah; ?></td>
-				<td>X</td>
+				<td style="text-align: center;"><?php echo $jumlah; ?></td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">					
 					<?php 
@@ -294,9 +345,7 @@
 			<tr>
 				<td>Undangan</td>
 				<td><?php echo $r['name']; ?></td>
-				<td>:</td>
-				<td><?php echo $jumlah; ?></td>
-				<td>X</td>
+				<td style="text-align: center;"><?php echo $jumlah; ?></td>
 				<td style="text-align: right;"><?php echo 'Rp. '.number_format($r['price'],0,'','.').',-'; ?></td>
 				<td style="text-align: right;">					
 					<?php 
@@ -314,11 +363,12 @@
 		<?php } } ?>
 
 			<tr>
-				<td colspan="6">Total</td>
-				<td><?php echo 'Rp. '.number_format($total,0,'','.').',-'; ?></td>
+				<td colspan="4"><b>Total</b></td>
+				<td style="text-align: right;"><b><?php echo 'Rp. '.number_format($total,0,'','.').',-'; ?></b></td>
 			</tr>
 			<tr>
-				<td colspan="7">
+				<td colspan="5">
+					<br>
 					<center>
 					<input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
 					<input type="hidden" name="user_name" value="<?php echo $user_name; ?>">
@@ -327,10 +377,14 @@
 					<input type="hidden" name="user_zip" value="<?php echo $user_zip; ?>">
 					<input type="hidden" name="wedding_date" value="<?php echo $wedding_date; ?>">
 					<input type="hidden" name="total" value="<?php echo $total; ?>">
-					<a href="index.php" class="btn btn-default"></a>
+					<a href="index.php" class="btn btn-default">Cancel</a>
 					<button type="submit" class="btn btn-primary">Proceed Checkout</button>
 					</center>
 				</td>
 			</tr>
 	</table>
 </form>
+</div>
+</div>
+</body>
+</html>

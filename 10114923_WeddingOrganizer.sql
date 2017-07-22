@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2017 at 10:27 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Generation Time: Jul 22, 2017 at 08:23 AM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -139,9 +139,9 @@ CREATE TABLE `gedung` (
 
 INSERT INTO `gedung` (`id`, `name`, `price`, `image`, `address`, `description`, `create_date`) VALUES
 (1, 'Gedung Balai Sartika', 14950000, 'media/gallery/balai-sartika.jpeg', 'Jl. Suryalaya Indah No. 1-3, Buahbatu, Cijagra, Lengkong, Kota Bandung, Jawa Barat 40265', '-', '2017-07-09 03:30:36'),
+(2, 'Graha Bhayangkara', 8500000, 'media/gallery/graha-bhayangkara.jpeg', 'Jl. Cicendo No.29, Pasir Kaliki, Cicendo, Kota Bandung, Jawa Barat 40171', '-', '2017-07-09 03:31:57'),
 (3, 'Gedung STT Tekstil', 6000000, 'media/gallery/stt-tekstil.jpeg', 'Jl. Jakarta No.34, Kebonwaru, Batununggal, Kota Bandung, Jawa Barat 40272', '-', '2017-07-09 03:32:54'),
-(4, 'Bale Asri Pusdai', 18500000, 'media/gallery/bale-asri-pusdai.jpeg', 'Jl. Diponegoro No.63, Cihaur Geulis, Cibeunying Kaler, Kota Bandung, Jawa Barat 40122', '-', '2017-07-09 03:34:07'),
-(5, 'Gedung Kologdam', 8500000, 'media/gallery/kologdam.jpeg', 'Jl. Aceh, Merdeka, Sumur Bandung, Kota Bandung, Jawa Barat 40113', '-', '2017-07-09 03:35:29');
+(4, 'Bale Asri Pusdai', 18500000, 'media/gallery/bale-asri-pusdai.jpeg', 'Jl. Diponegoro No.63, Cihaur Geulis, Cibeunying Kaler, Kota Bandung, Jawa Barat 40122', '-', '2017-07-09 03:34:07');
 
 -- --------------------------------------------------------
 
@@ -210,7 +210,25 @@ CREATE TABLE `order` (
 --
 
 INSERT INTO `order` (`id`, `create_date`, `wedding_date`, `id_user`, `id_cake`, `id_catering`, `id_dekorasi`, `id_dokumentasi`, `id_gedung`, `id_hiburan`, `id_riasnbaju`, `id_service`, `id_souvenir`, `id_undangan`, `harga_cake`, `harga_catering`, `harga_dekorasi`, `harga_dokumentasi`, `harga_gedung`, `harga_hiburan`, `harga_riasnbaju`, `harga_service`, `harga_souvenir`, `harga_undangan`, `jumlah_catering`, `jumlah_souvenir`, `jumlah_undangan`, `total`) VALUES
-(2, '2017-07-10 04:00:56', '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(24, '2017-07-11 13:35:42', '2017-07-28', 1, 16, NULL, 2, 1, 3, 2, 3, 3, NULL, NULL, 2100000, NULL, 10000000, 3500000, 6000000, 1500000, 6500000, 13500000, NULL, NULL, NULL, NULL, NULL, 43100000),
+(25, '2017-07-11 14:36:55', '2017-07-28', 1, 16, NULL, 2, 1, 3, 2, 3, 3, NULL, NULL, 2100000, NULL, 10000000, 3500000, 6000000, 1500000, 6500000, 13500000, NULL, NULL, NULL, NULL, NULL, 43100000),
+(26, '2017-07-11 15:46:08', '2017-07-28', 1, 16, NULL, 2, 1, 3, 2, 3, 3, NULL, NULL, 2100000, NULL, 10000000, 3500000, 6000000, 1500000, 6500000, 13500000, NULL, NULL, NULL, NULL, NULL, 43100000),
+(27, '2017-07-11 15:46:32', '2017-07-28', 1, 16, NULL, 2, 1, 3, 2, 3, 3, NULL, NULL, 2100000, NULL, 10000000, 3500000, 6000000, 1500000, 6500000, 13500000, NULL, NULL, NULL, NULL, NULL, 43100000),
+(28, '2017-07-11 15:46:35', '2017-07-28', 1, 16, NULL, 2, 1, 3, 2, 3, 3, NULL, NULL, 2100000, NULL, 10000000, 3500000, 6000000, 1500000, 6500000, 13500000, NULL, NULL, NULL, NULL, NULL, 43100000),
+(29, '2017-07-11 15:46:50', '2017-07-28', 1, 16, NULL, 2, 1, 3, 2, 3, 3, NULL, NULL, 2100000, NULL, 10000000, 3500000, 6000000, 1500000, 6500000, 13500000, NULL, NULL, NULL, NULL, NULL, 43100000),
+(30, '2017-07-11 15:48:36', '2017-07-28', 1, 16, NULL, 2, 1, 3, 2, 3, 3, NULL, NULL, 2100000, NULL, 10000000, 3500000, 6000000, 1500000, 6500000, 13500000, NULL, NULL, NULL, NULL, NULL, 43100000),
+(31, '2017-07-11 15:48:53', '2017-07-28', 1, 16, NULL, 2, 1, 3, 2, 3, 3, NULL, NULL, 2100000, NULL, 10000000, 3500000, 6000000, 1500000, 6500000, 13500000, NULL, NULL, NULL, NULL, NULL, 43100000),
+(32, '2017-07-11 15:57:19', '2017-07-22', 1, 1, 3, 3, 4, 4, 1, 1, 2, 6, 3, 3400000, 35000, 15000000, 4500000, 18500000, 2250000, 7500000, 10500000, 4500, 1500, 200, 300, 100, 70150000),
+(33, '2017-07-11 15:59:10', '2017-07-22', 1, 1, 3, 3, 4, 4, 1, 1, 2, 6, 3, 3400000, 35000, 15000000, 4500000, 18500000, 2250000, 7500000, 10500000, 4500, 1500, 200, 300, 100, 70150000),
+(34, '2017-07-11 16:00:57', '2017-07-22', 1, 1, 3, 3, 4, 4, 1, 1, 2, 6, 3, 3400000, 35000, 15000000, 4500000, 18500000, 2250000, 7500000, 10500000, 4500, 1500, 200, 300, 100, 70150000),
+(35, '2017-07-11 16:03:01', '2017-07-22', 1, 1, 3, 3, 4, 4, 1, 1, 2, 6, 3, 3400000, 35000, 15000000, 4500000, 18500000, 2250000, 7500000, 10500000, 4500, 1500, 200, 300, 100, 70150000),
+(36, '2017-07-11 16:03:18', '2017-07-22', 1, 1, 3, 3, 4, 4, 1, 1, 2, 6, 3, 3400000, 35000, 15000000, 4500000, 18500000, 2250000, 7500000, 10500000, 4500, 1500, 200, 300, 100, 70150000),
+(37, '2017-07-11 16:07:13', '2017-07-22', 1, 1, 3, 3, 4, 4, 1, 1, 2, 6, 3, 3400000, 35000, 15000000, 4500000, 18500000, 2250000, 7500000, 10500000, 4500, 1500, 200, 300, 100, 70150000),
+(53, '2017-07-11 16:37:12', '2017-07-28', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 13500000, NULL, NULL, NULL, NULL, NULL, 13500000),
+(54, '2017-07-16 15:44:34', '2017-08-03', 1, 16, 3, 1, 2, 1, 4, 1, 2, 2, 4, 2100000, 35000, 12000000, 3000000, 14950000, 2350000, 7500000, 10500000, 4000, 5500, 400, 200, 200, 68300000),
+(55, '2017-07-22 07:04:13', '2017-07-28', 1, 16, 3, 2, 2, 3, 3, 4, 1, 3, 2, 2100000, 35000, 10000000, 3000000, 6000000, 1000000, 7000000, 8500000, 5000, 850, 1000, 500, 500, 75525000),
+(56, '2017-07-22 07:50:21', '2017-07-20', 1, 16, 2, 2, 4, 3, 2, 4, 3, 2, NULL, 2100000, 30000, 10000000, 4500000, 6000000, 1500000, 7000000, 13500000, 4000, NULL, 100, 100, NULL, 48000000),
+(57, '2017-07-22 07:55:29', '2017-07-27', 1, NULL, 2, 2, 4, NULL, NULL, NULL, 1, NULL, NULL, NULL, 30000, 10000000, 4500000, NULL, NULL, NULL, 8500000, NULL, NULL, 0, NULL, NULL, 23000000);
 
 -- --------------------------------------------------------
 
@@ -281,9 +299,9 @@ CREATE TABLE `souvenir` (
 --
 
 INSERT INTO `souvenir` (`id`, `name`, `price`, `image`, `description`, `create_date`) VALUES
+(1, 'Kipas Biru', 3500, 'media/gallery/kipas.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:55:56'),
 (2, 'Gelas Mini', 4000, 'media/gallery/gelas.jpg', 'termasuk box dan kartu ucapan terima kasih', '2017-07-09 02:57:11'),
 (3, 'Kalender Kayu', 5000, 'media/gallery/log-calendar.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:55:45'),
-(4, 'Gantungan Kunci', 2500, 'media/gallery/gantungan-kunci.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:58:07'),
 (6, 'Frame Photo', 4500, 'media/gallery/frame-photo.jpg', 'Termasuk kartu ucapan terima kasih', '2017-07-09 02:59:36');
 
 -- --------------------------------------------------------
@@ -343,9 +361,13 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `type`, `status`, `name`, `birthdate`, `address`, `zip`, `city`, `province`, `country`, `phone`, `gender`, `image`, `create_date`) VALUES
 (1, 'firman', '74bfebec67d1a87b161e5cbcf6f72a4a', 'fearman.al@gmail.com', 'Admin', 'Enable', 'Firman Alhadiansyah', '1994-08-05', 'Jl. KH. Usman Dhomiri No. 44 RT.03/03 Kel. Padasuka Kec. Cimahi Tengah', 40526, 'Cimahi', 'Jawa Barat', 'Indonesia', 838217164, 'Pria', 'media/gallery/corp.jpg', '2017-07-08 19:08:50'),
-(3, 'rudy', 'rudy', 'rudy@gmail.com', 'Admin', 'Enable', 'Rudy Gedung', '1995-05-05', 'Bandung', 40958, 'Bandung', 'Jawa Barat', 'Indonesia', 2147483647, 'Pria', '', '2017-07-08 16:40:52'),
+(3, 'rudy', 'rudy', 'rudy1@gmail.com', 'User', 'Enable', 'Rudy Gedung', '1995-05-05', 'Bandung', 40958, 'Bandung', 'Jawa Barat', 'Indonesia', 2147483647, 'Pria', '', '2017-07-09 17:29:53'),
 (5, 'tantan', 'tantan', '', 'User', 'Enable', '', '0000-00-00', '', 0, '', '', '', 0, 'Pria', 'media/gallery/capture.png', '2017-07-08 16:43:15'),
-(7, 'ujang', 'c959810f01adc10791f46e1b3ecab45a', '', 'User', 'Enable', '', '0000-00-00', '', 0, '', '', '', 0, 'Pria', '', '2017-07-08 17:22:24');
+(7, 'ujang', 'c959810f01adc10791f46e1b3ecab45a', '', 'User', 'Enable', '', '0000-00-00', '', 0, '', '', '', 0, 'Pria', '', '2017-07-08 17:22:24'),
+(8, 'udin', '6bec9c852847242e384a4d5ac0962ba0', 'udin@udin,com', 'User', 'Enable', 'udin', '2017-05-16', 'Cimahi Tengah', 40526, 'Cimahi', 'Jawa Barat', 'Indonesia', 16531684, 'Pria', 'images/no-image.jpg', '2017-07-16 12:52:04'),
+(9, 'udin', '6bec9c852847242e384a4d5ac0962ba0', 'udin@udin,com', 'User', 'Enable', 'udin', '2017-05-16', 'Cimahi Tengah', 40526, 'Cimahi', 'Jawa Barat', 'Indonesia', 16531684, 'Pria', 'images/no-image.jpg', '2017-07-16 12:53:05'),
+(10, 'udin2', '6bec9c852847242e384a4d5ac0962ba0', 'udin@udin.com', 'User', 'Enable', 'udin 2', '2017-03-31', 'Cimahi Tengah', 40526, 'Cimahi', 'Jawa Barat', '', 1165315541, 'Pria', 'images/no-image.jpg', '2017-07-16 12:55:17'),
+(11, 'guest', '084e0343a0486ff05530df6c705c8bb4', 'guest@ggwp.com', 'User', 'Enable', 'Guest', '2017-05-16', 'guest', 123456, 'Guest', 'Guest', 'Guest', 0, 'Wanita', '', '2017-07-22 08:02:21');
 
 --
 -- Indexes for dumped tables
@@ -462,7 +484,7 @@ ALTER TABLE `dokumentasi`
 -- AUTO_INCREMENT for table `gedung`
 --
 ALTER TABLE `gedung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `hiburan`
 --
@@ -472,7 +494,7 @@ ALTER TABLE `hiburan`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 --
 -- AUTO_INCREMENT for table `riasnbaju`
 --
@@ -497,7 +519,7 @@ ALTER TABLE `undangan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- Constraints for dumped tables
 --
