@@ -27,7 +27,7 @@
                 include "koneksi.php";
                 $tbname="order";
                 $no = 0;
-                $modal=mysqli_query($connection, "SELECT * FROM wodb.$tbname");
+                $modal=mysqli_query($connection, "SELECT * FROM $db.$tbname");
                 while($r=mysqli_fetch_array($modal)){
                 $no++;
                      
