@@ -15,14 +15,19 @@
       <link href="css/demo-2/top-navbar-2.css" rel="stylesheet">
       <!-- Font Awesome icon -->
       <link href="css/font-awesome.min.css" rel="stylesheet">
+      <link href="css/imagehover.min.css" rel="stylesheet">
+      <link href="css/aos.css" rel="stylesheet">
       <!-- Google web font  -->
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,greek' rel='stylesheet' type='text/css'>
-      <!-- Font Awesome icon -->
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+       <style>
+         .judul {
+           font-family: 'Tangerine', serif;
+           font-size: 48px;
+           text-shadow: 4px 4px 4px #aaa;
+         }
+       </style>
+
    </head>
    <body class="demo">
       <div class="my-nav">
@@ -65,10 +70,180 @@
       <!-- Intro Header -->
       <header>
          <div  align="center"><img src="images/home.jpg" class="img-responsive"></div>
+         <br>
+         <div id="catalog" >
+            <div class="container">
+               <div class="judul">
+                  <center>
+                     <font size="48">Our Catalog</font>
+                  </center>
+                  <br>
+               </div>
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/service.png" width="300" height="200">
+                            <figcaption>
+                              <center>
+                                 <br>
+                                 <h2>Service</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/buffet.jpg" width="300" height="200">
+                            <figcaption>
+                               <center>
+                                 <br>
+                                 <h2>Buffet</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/cinderella.png" width="300" height="200">
+                            <figcaption>
+                              <center>
+                                 <br>
+                                 <h2>Cake</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+
+               <hr>
+            </div>
+            <div class="container">
+               <div class="judul">
+                  <br>
+               </div>
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/dekorasi.jpg" width="300" height="200">
+                            <figcaption>
+                              <center>
+                                 <br>
+                                 <h2>Dekorasi</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/dokumentasi.jpg" width="300" height="200">
+                            <figcaption>
+                               <center>
+                                 <br>
+                                 <h2>Dokumentasi</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/gedung.jpeg" width="300" height="200">
+                            <figcaption>
+                               <center>
+                                 <br>
+                                 <h2>Gedung</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+               
+               <hr>
+            </div>
+            <div class="container">
+               <div class="judul">
+                  <br>
+               </div>
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/dangdut.jpg" width="300" height="200">
+                            <figcaption>
+                               <center>
+                                 <br>
+                                 <h2>Dangdut</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/souvenir.jpg" width="300" height="200">
+                            <figcaption>
+                               <center>
+                                 <br>
+                                 <h2>Souvenir</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="aos-item" data-aos="fade-up">
+                        <figure class="imghvr-fade">
+                            <img src="image/mail.jpg" width="300" height="200">
+                            <figcaption>
+                               <center>
+                                 <br>
+                                 <h2>Undangan</h2>
+                              </center>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+               
+               <hr>
+            </div>
+               <hr>
+            </div>
+         </div>
       </header>
       <!--  Latest jQuery Plugins -->
       <script src="js/jquery.min.js"></script> <!-- Include all compiled plugins (below), or include individual files as needed --> 
-      <script src="js/bootstrap.min.js"></script> 
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/aos.js"></script> 
+      <script>
+         AOS.init({
+           easing: 'ease-in-out-sine'
+         });
+       </script>
       <!-- Mynav Bar Script --> 
       <script src="js/nav-js-1/jquery.sticky.js"></script> 
       <script src="js/nav-js-1/jquery.app.js"></script>
